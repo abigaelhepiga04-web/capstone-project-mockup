@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Travel & Tours</title>
+    <title>Uncle Ron's Travel & Tours</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -19,6 +19,22 @@
 </head>
 
 <body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <span><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines</span>
+            <span><i class="fa-solid fa-phone"></i> +63 912 345 6789</span>
+            <span><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</span>
+        </div>
+        <div class="topbar-right">
+            <span class="follow-label">Follow Us:</span>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
 
     <!-- ================= NAVBAR ================= -->
 
@@ -40,7 +56,7 @@
 
                     <li><a href="#">Packages</a></li>
 
-                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Car Rentals</a></li>
 
                     <li><a href="#">Services</a></li>
 
@@ -114,7 +130,7 @@
 
     <!-- ================= SEARCH ================= -->
 
-    <section class="search-section">
+    <!-- <section class="search-section">
 
         <div class="container">
 
@@ -172,190 +188,371 @@
 
         </div>
 
-    </section>
+    </section>  -->
 
-    <!-- ================= PACKAGES ================= -->
-
-    <section class="packages">
-
+    <!-- <section class="category-filter-section">
         <div class="container">
-
-            <div class="section-title">
-
-                <div>
-
-                    <span>TOP DESTINATIONS</span>
-
-                    <h2>Popular Tours & Packages</h2>
-
+            <div class="filter-wrapper">
+                <span class="filter-label"><i class="fa-solid fa-fire"></i> Popular Destinations:</span>
+                <div class="filter-pills">
+                    <button class="pill active">All Tours</button>
+                    <button class="pill"><i class="fa-solid fa-umbrella-beach"></i> Cebu Tours</button>
+                    <button class="pill"><i class="fa-solid fa-water"></i> Bohol Tours</button>
                 </div>
+            </div>
+        </div>
+    </section>  -->
 
-                <a href="#">View All Packages</a>
+    <!-- ================= CATEGORY FILTER SECTION ================= -->
+<section class="category-filter-section">
+    <div class="container">
+        <div class="filter-card">
+            <div class="filter-left">
+                <div class="filter-pills">
+                    <button class="pill active" data-filter="all">All Tours</button>
+                    <button class="pill" data-filter="cebu"><i class="fa-solid fa-location-dot"></i> Cebu Tours</button>
+                    <button class="pill" data-filter="cebu-bohol"><i class="fa-solid fa-location-dot"></i> Cebu-Bohol Tours</button>
+                    <button class="pill" data-filter="bohol"><i class="fa-solid fa-location-dot"></i> Bohol Tours</button>
+                    <button class="pill" data-filter="1-day"><i class="fa-solid fa-location-dot"></i> 1 DAY Tours</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- ================= PACKAGES ================= -->
+<section class="packages">
+    <div class="container">
+        <div class="section-title">
+            <div>
+                <span>TOP DESTINATIONS</span>
+                <h2>Popular Tours & Packages</h2>
+            </div>
+            <a href="#">View All Packages</a>
+        </div>
+
+        <div class="package-grid">
+
+            <!-- CEBU - BOHOL TOURS -->
+
+            <div class="card" data-category="cebu-bohol">
+                <img src="../images/CARD 6.jpg">
+                <div class="card-content">
+                    <span class="badge">Best Seller</span>
+                    <h3>5D4N Cebu - Bohol Tour</h3>
+                    <p>5 Days / 4 Nights</p>
+                    <p>• City Tour • Moalboal-Badian • Oslob & Simala • Bohol Tour • Panglao Island Hopping</p>
+                    <div class="price">From ₱7,598 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
             </div>
 
-            <div class="package-grid">
+            <div class="card" data-category="cebu-bohol">
+                <img src="../images/CARD 6.jpg">
+                <div class="card-content">
+                    <span class="badge">Best Seller</span>
+                    <h3>4D3N Cebu - Bohol Tour</h3>
+                    <p>4 Days / 3 Nights</p>
+                    <p>• City Tour • Moalboal-Badian • Oslob & Simala • Bohol Tour</p>
+                    <div class="price">From ₱7,598 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                <!-- CARD -->
+            <div class="card" data-category="cebu-bohol">
+                <img src="../images/CARD 6.jpg">
+                <div class="card-content">
+                    <span class="badge">Best Seller</span>
+                    <h3>3D2N Cebu - Bohol Tour</h3>
+                    <p>3 Days / 2 Nights</p>
+                    <p>• City Tour • Oslob & Simala • Bohol Tour</p>
+                    <div class="price">From ₱7,598 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                <div class="card">
+            <div class="card" data-category="cebu-bohol">
+                <img src="../images/CARD 6.jpg">
+                <div class="card-content">
+                    <span class="badge">Best Seller</span>
+                    <h3>2D2N Cebu - Bohol Tour</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>• City Tour • Bohol Tour</p>
+                    <div class="price">From ₱7,598 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                    <img src="../images/CARD 6.jpg">
+            <!-- CEBU TOURS -->
 
-                    <div class="card-content">
+            <div class="card" data-category="cebu">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>5D4N Cebu - Bantayan Tour</h3>
+                    <p>5 Days / 4 Nights</p>
+                    <p>• City Tour • Moalboal-Badian • Oslob & Simala • Bantayan Land • Bantayan Island Hopping</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        <span class="badge">Best Seller</span>
+            <div class="card" data-category="cebu">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>2D1N South Cebu Tour</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>• Moalboal-Badian • Oslob & Simala</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        <h3>4D3N Cebu - Bohol Tour</h3>
+            <div class="card" data-category="cebu">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>2D1N City & Oslob Tour</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>• City Tour • Oslob-Simala</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        <p>4 Days / 3 Nights</p>
+            <div class="card" data-category="cebu">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>2D1N City + Moalboal-Badian Tour</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>• City Tour • Moalboal-Badian</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        <p>Cebu • Bohol</p>
+            <div class="card" data-category="cebu">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>2D1N Bantayan Tour</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>• Bantayan Land • Bantayan Island Hopping</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        <div class="price">
+            <!-- BOHOL TOURS -->
 
-                            From ₱7,598 / person
+            <div class="card" data-category="bohol">
+                <img src="../images/CARD 2.jpg">
+                <div class="card-content">
+                    <span class="badge new">New</span>
+                    <h3>3D2N Bohol Tour</h3>
+                    <p>3 Days / 2 Nights</p>
+                    <p>• Bohol Countryside City • Island Hopping • Panglao</p>
+                    <div class="price">From ₱10,398 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        </div>
+            <!-- 1 DAY TOURS -->
 
-                        <a href="#" class="details">
+            <div class="card" data-category="1-day">
+                <img src="../images/CARD 4.jpg">
+                <div class="card-content">
+                    <h3>1D Cebu Tour</h3>
+                    <p>1 Day</p>
+                    <p>City Tour</p>
+                    <div class="price">From ₱10,298 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                            View Details
+            <div class="card" data-category="1-day">
+                <img src="../images/card 5.jpg">
+                <div class="card-content">
+                    <span class="badge blue">Popular</span>
+                    <h3>1D Cebu Tour</h3>
+                    <p>1 Day</p>
+                    <p>Moalboal-Badian Tour</p>
+                    <div class="price">From ₱5,998 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
-                        </a>
+            <div class="card" data-category="1-day">
+                <img src="../images/card 5.jpg">
+                <div class="card-content">
+                    <span class="badge blue">Popular</span>
+                    <h3>1D Cebu Tour</h3>
+                    <p>1 Day</p>
+                    <p>Oslob-Simala Tour</p>
+                    <div class="price">From ₱5,998 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
 
+            <div class="card" data-category="1-day">
+                <img src="../images/CARD 1.jpg">
+                <div class="card-content">
+                    <h3>1D Bohol Tour</h3>
+                    <p>1 Day</p>
+                    <p>Bohol-Countryside Tour</p>
+                    <div class="price">From ₱5,098 / person</div>
+                    <a href="#" class="details">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ================= REVIEWS / TESTIMONIALS ================= -->
+    <section class="reviews-section" id="reviews-section">
+        <div class="container">
+            
+            <div class="reviews-header">
+                <span class="eyebrow">TRAVELER STORIES</span>
+                <h2>What Our Guests Say</h2>
+                <div class="squiggle"><i class="fa-solid fa-star"></i></div>
+            </div>
+
+            <div class="reviews-grid">
+                
+                <!-- TESTIMONIAL CARD 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-
+                    <p class="testimonial-comment">
+                        "Everything was well organized from pickup to the tarsier sanctuary. Our guide was super accommodating with our itinerary requests!"
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">MS</div>
+                        <div>
+                            <strong>Maria Santos</strong>
+                            <span>4D3N Cebu - Bohol Tour</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- CARD -->
-
-                <div class="card">
-
-                    <img src="../images/CARD 2.jpg">
-
-                    <div class="card-content">
-
-                        <span class="badge new">New</span>
-
-                        <h3>5D4N Cebu + Panglao</h3>
-
-                        <p>5 Days / 4 Nights</p>
-
-                        <p>Cebu • Panglao</p>
-
-                        <div class="price">
-
-                            From ₱10,398 / person
-
-                        </div>
-
-                        <a href="#" class="details">
-
-                            View Details
-
-                        </a>
-
+                <!-- TESTIMONIAL CARD 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-
+                    <p class="testimonial-comment">
+                        "Bantayan's beaches are unreal and the whole trip felt hassle-free. Booking and payment through the site was quick too."
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">KT</div>
+                        <div>
+                            <strong>Kevin Tan</strong>
+                            <span>5D4N Cebu - Bantayan</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- CARD -->
-
-                <div class="card">
-
-                    <img src="../images/CARD 4.jpg">
-
-                    <div class="card-content">
-
-                        <h3>5D4N Cebu Bantayan</h3>
-
-                        <p>5 Days / 4 Nights</p>
-
-                        <p>Bantayan Island</p>
-
-                        <div class="price">
-
-                            From ₱10,298 / person
-
-                        </div>
-
-                        <a href="#" class="details">
-
-                            View Details
-
-                        </a>
-
+                <!-- TESTIMONIAL CARD 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
-
+                    <p class="testimonial-comment">
+                        "Great value for a short getaway. Would've liked a bit more free time at Temple of Leah, but overall a solid trip."
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">AR</div>
+                        <div>
+                            <strong>Angela Reyes</strong>
+                            <span>3D2N Cebu City Tour</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- CARD -->
 
-                <div class="card">
-
-                    <img src="../images/card 5.jpg">
-
-                    <div class="card-content">
-
-                        <span class="badge blue">Popular</span>
-
-                        <h3>3D2N Cebu Bohol</h3>
-
-                        <p>3 Days / 2 Nights</p>
-
-                        <p>Cebu • Bohol</p>
-
-                        <div class="price">
-
-                            From ₱5,998 / person
-
-                        </div>
-
-                        <a href="#" class="details">
-
-                            View Details
-
-                        </a>
-
+                <!-- TESTIMONIAL CARD 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
-
+                    <p class="testimonial-comment">
+                        "Great value for a short getaway. Would've liked a bit more free time at Temple of Leah, but overall a solid trip."
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">AR</div>
+                        <div>
+                            <strong>Angela Reyes</strong>
+                            <span>3D2N Cebu City Tour</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- CARD -->
-
-                <div class="card">
-
-                    <img src="../images/CARD 1.jpg">
-
-                    <div class="card-content">
-
-                        <h3>3D2N Cebu Tour</h3>
-
-                        <p>3 Days / 2 Nights</p>
-
-                        <p>Cebu City</p>
-
-                        <div class="price">
-
-                            From ₱5,098 / person
-
-                        </div>
-
-                        <a href="#" class="details">
-
-                            View Details
-
-                        </a>
-
+                <!-- TESTIMONIAL CARD 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
+                    <p class="testimonial-comment">
+                        "Great value for a short getaway. Would've liked a bit more free time at Temple of Leah, but overall a solid trip."
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">AR</div>
+                        <div>
+                            <strong>Angela Reyes</strong>
+                            <span>3D2N Cebu City Tour</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- TESTIMONIAL CARD 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="testimonial-comment">
+                        "Great value for a short getaway. Would've liked a bit more free time at Temple of Leah, but overall a solid trip."
+                    </p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">AR</div>
+                        <div>
+                            <strong>Angela Reyes</strong>
+                            <span>3D2N Cebu City Tour</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
         </div>
-
     </section>
 
     <!-- ================= FEATURES ================= -->
@@ -411,20 +608,14 @@
     <!-- ================= FOOTER ================= -->
 
     <footer>
-
         <div class="container">
-
             <p>
-
-                © 2026 Travel & Tours.
+                © 2026 Uncle Ron's Travel & Tours.
                 All Rights Reserved.
-
             </p>
-
         </div>
-
     </footer>
 
+<script src="../js/script.js"></script>
 </body>
-
 </html>
