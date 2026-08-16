@@ -38,43 +38,59 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <header>
-
+    <!-- <header>
         <div class="container navbar">
-
             <div class="logo">
-
                 <img src="../images/Uncle_rons_logo-removebg-preview.png" alt="Logo">
-
             </div>
-
             <nav>
-
                 <ul>
-
                     <li><a class="active" href="#">Home</a></li>
-
                     <li><a href="#">Packages</a></li>
-
                     <li><a href="#">Car Rentals</a></li>
-
                     <li><a href="#">Services</a></li>
-
                     <li><a href="#">About</a></li>
-
                     <li><a href="#">Contact</a></li>
-
                 </ul>
-
             </nav>
-
             <a href="#" class="book-btn">
                 Book Now
             </a>
-
         </div>
+    </header> -->
 
-    </header>
+    <!-- ================= NAVBAR WITH DROPDOWN ================= -->
+<header class="header-transparent">
+    <div class="container navbar">
+        <div class="logo">
+            <img src="../images/Uncle_rons_logo-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="../../index.html">Home</a></li>
+
+                <!-- PACKAGES DROPDOWN MENU -->
+                <li class="dropdown-parent">
+                    <a href="#">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Nested Dropdown List -->
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/cebu-tours/oslob-tour.html">Oslob Tours</a></li>
+                        <li><a href="#">Badian Tours</a></li>
+                        <li><a href="#">Moalboal Tours</a></li>
+                        <li><a href="#">Bohol Tours</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Car Rentals</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="book-btn">Book Now</a>
+    </div>
+</header>
 
     <!-- ================= HERO ================= -->
 
@@ -317,7 +333,7 @@
                     <p>2 Days / 1 Night</p>
                     <p>• City Tour • Oslob-Simala</p>
                     <div class="price">From ₱10,398 / person</div>
-                    <a href="#" class="details">View Details</a>
+                    <a href="../pages/cebu-tours/oslob-tour.html" class="details">View Details</a>
                 </div>
             </div>
 

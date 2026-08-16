@@ -111,8 +111,29 @@ header {
     left: 0;
     width: 100%;
     height: 100px;
-    background: transparent;
+    /* background: transparent; */
     z-index: 100;
+}
+
+header.header-transparent {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: transparent;
+}
+
+/* Inner Pages Solid Variant (Oslob Tour, Packages, etc.) */
+header.header-dark {
+    position: relative !important;
+    height: 100px !important; 
+    height: auto !important;
+    background-color: #0c2340;
+}
+
+/* Constrain the logo on the inner pages so it doesn't push the title down too far */
+header.header-dark .logo img {
+   
+    padding-top: 0;
 }
 
 .navbar {
@@ -125,7 +146,7 @@ header {
 
 .logo {
     width: auto;
-    height: 130px;
+    height: auto;
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -187,6 +208,50 @@ nav ul li a.active {
 nav ul li a:hover::after,
 nav ul li a.active::after {
     width: 100%;
+}
+
+/* Position reference for dropdown placement */
+nav ul li.dropdown-parent {
+    position: relative;
+}
+
+/* Hide dropdown menu by default */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Dropdown list item styling */
+nav ul li .dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+nav ul li .dropdown-menu li a {
+    color: #333333;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover effects */
+nav ul li .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: #007bff;
+}
+
+/* Show the dropdown menu when hovering over the parent list item */
+nav ul li.dropdown-parent:hover .dropdown-menu {
+    display: block;
 }
 
 .book-btn {
@@ -768,6 +833,181 @@ nav ul li a.active::after {
     color: #607084;
     font-size: 12px;
     line-height: 1.4;
+}
+
+/* ================= TOUR DETAILS STYLES ================= */
+
+.tour-header-banner {
+    background-color: #ffffff; /* Light background */
+    padding: 60px 0 30px;  
+    position: relative;
+    z-index: 1;
+}
+
+.tour-header-banner h1 {
+    color: #0f172a;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.tour-header-banner .breadcrumb {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.tour-header-banner .breadcrumb a {
+    color: #0284c7;
+    text-decoration: none;
+}
+
+/* Highlights Bar */
+.tour-highlights-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin: 25px 0 35px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+.highlight-item i {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* Two Column Layout */
+.tour-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Main Content & Gallery */
+.tour-gallery .main-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.quick-overview {
+    margin-top: 20px;
+}
+
+.quick-overview .rating {
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+.quick-overview .rating span {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+
+.quick-overview h2, .tour-description-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.itinerary-list {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.itinerary-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.itinerary-list li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #cbd5e1;
+}
+
+/* Booking Sidebar Widget */
+.booking-card {
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    border-radius: 12px;
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.booking-card h3 {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-tag .amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0284c7;
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.booking-form input[type="date"],
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.addons .checkbox-container {
+    display: block;
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.book-now-submit {
+    width: 100%;
+    background: #0284c7;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.book-now-submit:hover {
+    background: #0369a1;
 }
 
 /* ================= FOOTER ================= */
