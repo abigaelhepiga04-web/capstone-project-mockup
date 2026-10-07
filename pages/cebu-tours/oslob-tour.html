@@ -12,8 +12,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Main Stylesheet (Relative path from pages/cebu-tours/) -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon-180.png">
 </head>
 
 <body>
@@ -34,62 +41,59 @@
         </div>
     </div>
 
-    <!-- ================= NAVBAR ================= -->
-    <!-- <header>
+    <!-- HEADER NAVBAR -->
+    <header class="header-dark">
         <div class="container navbar">
             <div class="logo">
                 <img src="../../images/Uncle_rons_logo-removebg-preview.png" alt="Uncle Ron's Logo">
             </div>
-
             <nav>
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a class="active" href="../packages.html">Packages</a></li>
-                    <li><a href="#">Car Rentals</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../../index/index.html">Home</a></li>
+                    <li class="dropdown-parent">
+                        <a class="active" href="../../pages/package.html">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../pages/cebu-tours/oslob-tour.html">Oslob Tours</a></li>
+                            <li><a href="#">Badian Tours</a></li>
+                            <li><a href="#">Moalboal Tours</a></li>
+                            <li><a href="#">Bohol Tours</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../pages/services.html">Services</a></li>
+                    
+                    <!-- ABOUT US DROPDOWN MENU -->
+                    <li class="dropdown-parent">
+                        <a href="../../pages/about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../pages/awards.html">Accreditation & Awards</a></li>
+                            <li><a href="../../pages/reviews.html">Reviews & Feedback</a></li>
+                            <li><a href="../../pages/guides.html">Travel Guides</a></li>
+                            <li><a href="../../pages/faqs.html">FAQs</a></li>
+                            <li><a href="../../pages/terms.html">Terms & Policies</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
-
-            <a href="#" class="book-btn">Book Now</a>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" onclick="window.urAuth && window.urAuth.openFind()" aria-label="Find My Booking" title="Find My Booking">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="../package.html" class="book-btn">Book Now</a>
+            </div>
         </div>
-    </header> -->
+    </header>
 
-   <!-- HEADER NAVBAR -->
-<header class="header-dark">
-    <div class="container navbar">
-        <div class="logo">
-            <img src="../../images/Uncle_rons_logo-removebg-preview.png" alt="Uncle Ron's Logo">
+    <!-- TOUR HEADER BANNER -->
+    <section class="tour-header-banner">
+        <div class="container">
+            <h1>Private Oslob Whale Shark Watching & Snorkeling Tour with Tumalog Falls</h1>
+            <div class="breadcrumb">
+                <a href="../../index/index.html">Home</a> / <a href="../package.html">Cebu Tours</a> / <span>Oslob Whale Shark Tour</span>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index/index.html">Home</a></li>
-                <li class="dropdown-parent">
-                    <a class="active" href="#">Packages <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="oslob-tour.html">Oslob Tours</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Car Rentals</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="book-btn">Book Now</a>
-    </div>
-</header>
-
-<!-- TOUR HEADER BANNER (SEPARATE SECTION BELOW HEADER) -->
-<section class="tour-header-banner">
-    <div class="container">
-        <h1>Private Oslob Whale Shark Watching & Snorkeling Tour with Tumalog Falls</h1>
-        <div class="breadcrumb">
-            <a href="../../index.html">Home</a> / <a href="../packages.html">Cebu Tours</a> / <span>Oslob Whale Shark Tour</span>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ================= MAIN TOUR DETAIL CONTENT ================= -->
     <section class="tour-details-section">
@@ -115,7 +119,7 @@
                 </div>
             </div>
 
-            <!-- Two-Column Layout (Overview + Sticky Booking Form) -->
+            <!-- Two-Column Layout -->
             <div class="tour-grid">
 
                 <!-- Left Column: Media & Information -->
@@ -140,7 +144,7 @@
                         <p>After the whale shark encounter, visit the beautiful Tumalog Falls, known for its refreshing misty cascades and relaxing natural scenery.</p>
                     </div>
 
-                    <!-- Tour Tabs / Full Itinerary Details -->
+                    <!-- Tour Description -->
                     <div class="tour-description-section">
                         <h3>Tour Description & Itinerary</h3>
                         <p>Start your journey with a scenic coastal drive to Oslob, followed by a short briefing on responsible interaction with the whale sharks. Then, hop on a boat and prepare for an awe-inspiring encounter as these massive yet friendly creatures gracefully swim beside you.</p>
@@ -161,66 +165,279 @@
 
                 <!-- Right Column: Booking Widget Form -->
                 <div class="tour-sidebar">
-                    <div class="booking-card">
-                        <h3>BOOKING FORM</h3>
-                        <div class="price-tag">
-                            <span>TOTAL PRICE</span>
-                            <div class="amount">₱7,400</div>
-                            <small>₱7,400.00 x 1 Adult</small>
+                    <div class="booking-card bk" id="bk" data-price="7400" data-price-foreign="7400" data-max="11" data-capacity="30" data-tour="oslob-whale-shark">
+                        <h3>Book This Package</h3>
+                        <div class="bk-avail" id="bkAvail" data-level="none">
+                            <div class="bk-urgency" id="bkUrgency"></div>
+                            <div class="bk-avail-text"><b id="bkAvailLabel"></b><span id="bkAvailLeft"></span></div>
                         </div>
+                        <button type="button" class="bk-back" id="bkBack" hidden>← Back</button>
 
-                        <form class="booking-form">
-                            <div class="form-group">
-                                <label>Select Travel Date & Time</label>
-                                <input type="date" required>
-                            </div>
+                        <form id="bkForm" novalidate>
 
-                            <div class="form-group">
-                                <label>Pick-up Time</label>
-                                <select>
-                                    <option>03:00 AM</option>
-                                    <option>03:30 AM</option>
-                                    <option>04:00 AM</option>
-                                </select>
-                            </div>
+                            <!-- STEP 1: DETAILS -->
+<section class="bk-step" data-step="1">
+    <!-- Tour Date (Full Width) -->
+    <div class="bk-field-group">
+        <label class="bk-label" for="bkDate">Tour date</label>
+        <input type="date" id="bkDate" required>
+    </div>
 
-                            <div class="form-group">
-                                <label>Guests</label>
-                                <select>
-                                    <option>1 Adult</option>
-                                    <option>2 Adults</option>
-                                    <option>3 Adults</option>
-                                    <option>4+ Group</option>
-                                </select>
-                            </div>
+    <!-- Booking Type Radio Cards (Full Width) -->
+    <div class="bk-field-group">
+        <span class="bk-label">Booking Type</span>
+        <div class="bk-type-options" id="bkTypeGroup">
+            <label class="bk-type-card" id="bkTypeJoinerCard">
+                <input type="radio" name="bkType" id="bkTypeJoinerRadio" value="joiners" checked>
+                <span class="bk-type-content">
+                    <span class="bk-type-title">
+                        <span class="dot dot-green"></span> Joiner
+                    </span>
+                    <small class="bk-type-desc">Share a van with other guests</small>
+                </span>
+            </label>
 
-                            <div class="form-group addons">
-                                <label>Add-ons</label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox"> GoPro Rental (+₱1,000)
-                                </label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox"> Osmeña Peak Side Trip (+₱1,000)
-                                </label>
-                            </div>
+            <label class="bk-type-card" id="bkTypeExclusiveCard">
+                <input type="radio" name="bkType" id="bkTypeExclusiveRadio" value="exclusive">
+                <span class="bk-type-content">
+                    <span class="bk-type-title">
+                        <span class="dot dot-blue"></span> Exclusive
+                    </span>
+                    <small class="bk-type-desc">Reserve an entire van</small>
+                </span>
+            </label>
+        </div>
+    </div>
 
-                            <button type="submit" class="book-now-submit">Proceed to Reservation</button>
+    <!-- Guests Selection -->
+    <span class="bk-label">Guests</span>
+    <div class="bk-guests">
+        <button type="button" class="bk-guests-btn" id="bkGuestsBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="bkGuestsText">1 Guest</span><i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="bk-guests-panel" id="bkGuestsPanel" hidden>
+            <div class="bk-pax">
+                <span>Local</span>
+                <div class="bk-counter">
+                    <button type="button" data-pax="adult" data-dir="-1" aria-label="Fewer adults">−</button>
+                    <b id="bkAdultN">1</b>
+                    <button type="button" data-pax="adult" data-dir="1" aria-label="More adults">+</button>
+                </div>
+            </div>
+
+            <div class="bk-pax">
+                <span>Foreigners</span>
+                <div class="bk-counter">
+                    <button type="button" data-pax="foreign" data-dir="-1" aria-label="Fewer foreign">−</button>
+                    <b id="bkForeignN">0</b>
+                    <button type="button" data-pax="foreign" data-dir="1" aria-label="More foreign">+</button>
+                </div>
+            </div>
+
+            <div class="bk-pax-divider"></div>
+            <div class="bk-pax-info-note">
+                <i class="fa-regular fa-circle-info"></i>
+                <span>Entrance fee discounts may apply based on guest type. See <a href="../terms.html">Terms & Conditions</a> for details.</span>
+            </div>
+        </div>
+    </div>
+
+                                <p class="bk-note">Exclusive Booking: Up to <b>11</b> guests per booking. Bigger group? <a href="../contact.html">Contact us</a> directly.</p>
+                                <p class="bk-note">Joiners/Shared Booking: Up to <b>8</b> guests per booking. Bigger group? Avail the exclusive tour. 
+                                <p class="bk-note" id="bkAvailMsg"></p>
+
+                                <span class="bk-label">Add-ons</span>
+                                <label class="bk-check"><input type="checkbox" data-price="1000" data-per="booking"> GoPro Rental <em>(+₱1,000)</em></label>
+                                <label class="bk-check"><input type="checkbox" data-price="1000" data-per="booking"> Osmeña Peak Side Trip <em>(+₱1,000)</em></label>
+
+                                <h4 class="bk-heading">Contact details</h4>
+                                <label class="bk-label" for="bkName">Full name (lead guest)</label>
+                                <input type="text" id="bkName" autocomplete="name" required>
+                                <label class="bk-label" for="bkPhone">Contact number</label>
+                                <input type="tel" id="bkPhone" autocomplete="tel" required>
+                                <label class="bk-label" for="bkEmail">Email address</label>
+                                <input type="email" id="bkEmail" autocomplete="email" required>
+                                <label class="bk-label" for="bkPickup">Pickup location / hotel name / flight #</label>
+                                <input type="text" id="bkPickup" required>
+                                <label class="bk-label" for="bkMsg">Message / special requests</label>
+                                <textarea id="bkMsg" rows="3"></textarea>
+
+                                <button type="button" class="bk-btn" data-next>Continue →</button>
+                            </section>
+
+                            <!-- STEP 2: PAYMENT -->
+                            <section class="bk-step" data-step="2" hidden>
+                                <h4 class="bk-heading">How much would you like to pay now?</h4>
+                                <div class="bk-two">
+                                    <label class="bk-choice"><input type="radio" name="bkPay" value="full"><span><b>100% Full Payment</b><small>Settle the full payment now</small></span></label>
+                                    <label class="bk-choice"><input type="radio" name="bkPay" value="deposit" checked><span><b>50% Deposit</b><small>Balance via cash payment on the tour date</small></span></label>
+                                </div>
+
+                                <h4 class="bk-heading">Payment options</h4>
+                                <label class="bk-choice"><input type="radio" name="bkMethod" value="card" data-fee="5" checked><span><b>Credit / Debit Cards <em>(+5% service charge)</em></b>
+                                    <span class="bk-chips"><span>VISA</span><span>Mastercard</span><span>Amex</span><span>JCB</span></span></span></label>
+                                <label class="bk-choice"><input type="radio" name="bkMethod" value="ewallet" data-fee="3"><span><b>E-Wallets via PayMongo <em>(+3% service charge)</em></b>
+                                    <span class="bk-chips"><span>GCash</span><span>GrabPay</span><span>QR Ph</span></span></span></label>
+                                <label class="bk-choice"><input type="radio" name="bkMethod" value="maya" data-fee="3"><span><b>Digital Payments – Maya <em>(+3% service charge)</em></b>
+                                    <span class="bk-chips"><span>Maya</span><span>Apple Pay</span><span>Google Pay</span></span></span></label>
+                                <label class="bk-choice"><input type="radio" name="bkMethod" value="paypal" data-fee="5"><span><b>PayPal <em>(+5% service charge)</em></b>
+                                    <span class="bk-chips"><span>PayPal</span></span></span></label>
+                                <label class="bk-choice"><input type="radio" name="bkMethod" value="bank" data-fee="0"><span><b>Bank Deposit or InstaPay <em>(No extra charge)</em></b>
+                                    <span class="bk-chips"><span>BDO</span><span>BPI</span><span>UnionBank</span></span></span></label>
+
+                                <!-- <h4 class="bk-heading">Coupon code</h4>
+                                <div class="bk-coupon">
+                                    <input type="text" id="bkCoupon" placeholder="Enter coupon code (optional)">
+                                    <button type="button" class="bk-btn ghost" id="bkApply">Apply</button>
+                                </div>
+                                <p class="bk-note" id="bkCouponMsg"></p> -->
+
+                                <div class="bk-summary" id="bkSummary"></div>
+                                <button type="button" class="bk-btn" data-next>Continue to payment →</button>
+                            </section>
+
+                            <!-- STEP 3: PAY -->
+                            <section class="bk-step" data-step="3" hidden>
+                                <div class="bk-cardhead"><i class="fa-regular fa-credit-card"></i> Debit or Credit Card</div>
+                                <div id="bkCard">
+                                    <label class="bk-label" for="bkCardNo">Card number</label>
+                                    <input type="text" id="bkCardNo" inputmode="numeric" autocomplete="cc-number" maxlength="19" required>
+                                    <div class="bk-two">
+                                        <div><label class="bk-label" for="bkExp">Expires</label>
+                                            <input type="text" id="bkExp" placeholder="MM/YY" autocomplete="cc-exp" maxlength="5" required></div>
+                                        <div><label class="bk-label" for="bkCsc">CSC</label>
+                                            <input type="text" id="bkCsc" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required></div>
+                                    </div>
+                                    <label class="bk-label" for="bkCardName">Name on card</label>
+                                    <input type="text" id="bkCardName" autocomplete="cc-name" required>
+                                </div>
+                                <p class="bk-redirect" id="bkRedirect" hidden></p>
+                                <p class="bk-note">By continuing, you confirm you're 18 years or older.</p>
+                                <button type="button" class="bk-btn pay" id="bkPayBtn">Pay</button>
+                            </section>
+
+                            <!-- STEP 4: DONE -->
+                            <section class="bk-step bk-done" data-step="4" hidden>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <h4>Booking request received</h4>
+                                <p>Your booking number is <strong id="bkRef"></strong>.<br>A confirmation will be sent to <strong id="bkEmailOut"></strong>.</p>
+                                <p class="bk-note" id="bkSeats"></p>
+                                <p class="bk-note">No account needed: use the search icon in the menu (Find My Booking) with this number and your email.</p>
+                            </section>
                         </form>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Leave a Review Section -->
+            <div class="review-form-card">
+                <h3>Leave a Review</h3>
+                <p class="review-form-sub">Share your experience with this tour to help future travelers!</p>
+
+                <form class="tour-review-form" id="tourReviewForm" novalidate>
+                    <div class="rating-picker-group">
+                        <label>Your Rating <span class="required">*</span></label>
+                        <div class="star-rating-picker" id="starRatingPicker">
+                            <i class="fa-regular fa-star" data-value="1"></i>
+                            <i class="fa-regular fa-star" data-value="2"></i>
+                            <i class="fa-regular fa-star" data-value="3"></i>
+                            <i class="fa-regular fa-star" data-value="4"></i>
+                            <i class="fa-regular fa-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" name="rating" id="reviewRatingInput" value="0" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewName">Booking Number <span class="required">*</span></label>
+                            <input type="text" id="reviewName" placeholder="e.g. URT-8K4P2M" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewComment">Your Review <span class="required">*</span></label>
+                        <textarea id="reviewComment" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Submit Review</button>
+                </form>
+            </div>
+
         </div>
     </section>
 
+    <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://wa.me/639123456789" target="_blank" rel="noopener" class="contact-btn whatsapp" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <button type="button" id="contactToggleBtn" title="Contact Us" aria-label="Toggle contact options">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <!-- ================= FOOTER ================= -->
     <footer>
-        <div class="container">
+        <div class="footer-widgets">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Uncle Ron's Travel & Tours is a DOT-accredited travel agency based in Cebu City, Philippines. We specialize in hassle-free, handpicked tour packages across Cebu, Bohol, and nearby islands.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Additional Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DOT Accreditation & Licenses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Travel Tips & Guides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Oslob Whale Shark Rules & Policies</a></li>
+                        <li><a href="#">Canyoneering Kawasan Falls Guide</a></li>
+                        <li><a href="#">Best Months to Visit Cebu & Bohol</a></li>
+                        <li><a href="#">What to Pack for Island Hopping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +63 912 345 6789</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines 6000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
             <p>© 2026 Uncle Ron's Travel & Tours. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="../../js/script.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/booking-form.js"></script>
 </body>
-
 </html>

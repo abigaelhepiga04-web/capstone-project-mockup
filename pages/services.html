@@ -12,6 +12,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48.png">
+
     <!-- Main Stylesheet (Relative path from pages/) -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -44,7 +47,7 @@
                 <ul>
                     <li><a href="../index/index.html">Home</a></li>
                     <li class="dropdown-parent">
-                        <a href="#">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="../pages/package.html">Packages <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="cebu-tours/oslob-tour.html">Oslob Tours</a></li>
                             <li><a href="#">Badian Tours</a></li>
@@ -52,13 +55,31 @@
                             <li><a href="#">Bohol Tours</a></li>
                         </ul>
                     </li>
-                    <li><a href="../pages/car-rentals.html">Car Rentals</a></li>
+                    <!-- <li><a href="../pages/car-rentals.html">Car Rentals</a></li> -->
                     <li><a class="active" href="../pages/services.html">Services</a></li>
-                    <li><a href="../pages/about.html">About</a></li>
+                    
+                      <!-- ABOUT US DROPDOWN MENU -->
+                    <li class="dropdown-parent">
+                        <a href="../pages/about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
+                        <!-- Nested Dropdown List -->
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/awards.html">Accreditation & Awards</a></li>
+                            <li><a href="../pages/reviews.html">Reviews & Feedback</a></li>
+                            <li><a href="../pages/guides.html">Travel Guides</a></li>
+                            <li><a href="../pages/faqs.html">FAQs</a></li>
+                            <li><a href="../pages/terms.html">Terms & Policies</a></li>
+                        </ul>
+                    </li>
+                    
                     <li><a href="../pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="book-btn">Book Now</a>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" onclick="window.urAuth && window.urAuth.openFind()" aria-label="Find My Booking" title="Find My Booking">
+                     <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="../pages/package.html" class="book-btn">Book Now</a>
+            </div>
         </div>
     </header>
 
@@ -152,13 +173,86 @@
         </div>
     </section>
 
+          <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://wa.me/639123456789" target="_blank" rel="noopener" class="contact-btn whatsapp" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <button type="button" id="contactToggleBtn" title="Contact Us" aria-label="Toggle contact options">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!-- ================= FOOTER ================= -->
+
     <footer>
-        <div class="container">
+        <!-- Pre-Footer Widgets Section -->
+        <div class="footer-widgets">
+            <div class="container footer-grid">
+                
+                <!-- Column 1: About Us -->
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>
+                        Uncle Ron's Travel & Tours is a DOT-accredited travel agency based in Cebu City, Philippines. We specialize in hassle-free, handpicked tour packages across Cebu, Bohol, and nearby islands.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Additional Resources -->
+                <div class="footer-col">
+                    <h3>Additional Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DOT Accreditation & Licenses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Travel Tips & Guides -->
+                <div class="footer-col">
+                    <h3>Travel Tips & Guides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Oslob Whale Shark Rules & Policies</a></li>
+                        <li><a href="#">Canyoneering Kawasan Falls Guide</a></li>
+                        <li><a href="#">Best Months to Visit Cebu & Bohol</a></li>
+                        <li><a href="#">What to Pack for Island Hopping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +63 912 345 6789</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines 6000</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright Strip -->
+        <div class="container footer-bottom">
             <p>© 2026 Uncle Ron's Travel & Tours. All Rights Reserved.</p>
         </div>
     </footer>
+    
 
+    <script src="../js/auth.js"></script>
     <script src="../js/script.js"></script>
 </body>
 

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Uncle Ron's Travel & Tours</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- Main Stylesheet (Relative path from pages/) -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48.png">
+    
 </head>
 
 <body>
@@ -27,10 +26,10 @@
         </div>
         <div class="topbar-right">
             <span class="follow-label">Follow Us:</span>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
 
@@ -44,7 +43,7 @@
                 <ul>
                     <li><a href="../index/index.html">Home</a></li>
                     <li class="dropdown-parent">
-                        <a href="#">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="package.html">Packages <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="cebu-tours/oslob-tour.html">Oslob Tours</a></li>
                             <li><a href="#">Badian Tours</a></li>
@@ -52,13 +51,27 @@
                             <li><a href="#">Bohol Tours</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Car Rentals</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a class="active" href="about.html">About</a></li>
+                    <li class="dropdown-parent">
+                        <a class="active" href="about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="awards.html">Accreditation & Awards</a></li>
+                            <li><a href="reviews.html">Reviews & Feedback</a></li>
+                            <li><a href="guides.html">Travel Guides</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="terms.html">Terms & Policies</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="book-btn">Book Now</a>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" onclick="window.urAuth && window.urAuth.openFind()" aria-label="Find My Booking" title="Find My Booking">
+                   <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- <a href="#" class="book-btn" id="authBtn">Sign Up</a> -->
+                <a href="../pages/package.html" class="book-btn">Book Now</a>
+            </div>
         </div>
     </header>
 
@@ -67,26 +80,29 @@
         <div class="container">
             <h1>About Uncle Ron's Travel & Tours</h1>
             <div class="breadcrumb">
-                <a href="../index/index.html">Home</a> / <span>About</span>
+                <a href="../index/index.html">Home</a> / <span>About Us</span>
             </div>
         </div>
     </section>
 
-    <!-- ================= OUR STORY ================= -->
-    <section class="about-section">
+    <!-- ================= TRUST INTRO ================= -->
+    <section class="trust-section">
         <div class="container">
-            <div class="about-grid">
-                <img src="../images/bg for mockup.jpg" alt="Uncle Ron's Travel & Tours">
-
-                <div class="about-text">
-                    <span class="eyebrow">OUR STORY</span>
-                    <h2>Local Guides, Genuine Cebu Hospitality</h2>
-                    <p>Uncle Ron's Travel & Tours started as a small family-run business helping visitors discover the best of Cebu and Bohol. What began with a single van and a handful of loyal guests has grown into a full-service, DOT-accredited travel agency.</p>
-                    <p>Today, we still run things the same way we started: personally, honestly, and with a genuine love for showing people around our home. Every itinerary is built by locals who know these islands inside and out.</p>
-                    <a href="services.html" class="btn primary">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        Explore Our Services
-                    </a>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Why We Do This</h3>
+                    <p>We think a good trip isn't measured by how many stops you hit, but by how it feels to be shown around by someone who actually knows the place. That's the whole point of Uncle Ron's.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Who We Are</h3>
+                    <p>A Cebu-based, DOT-accredited team running private and small-group tours across Cebu and Bohol — from whale shark encounters to waterfall canyoneering and island hopping.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>The Uncle Ron's Difference</h3>
+                    <p>Fixed, upfront pricing. Guides who grew up here. And itineraries built around real travel times, not padded to look longer on paper.</p>
                 </div>
             </div>
         </div>
@@ -116,13 +132,56 @@
         </div>
     </section>
 
-    <!-- ================= MISSION / VISION / VALUES ================= -->
+    <!-- ================= OUR STORY ================= -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper" style="position: relative;">
+                    <img src="../images/bg for mockup.jpg" alt="Uncle Ron's Travel & Tours">
+                    <div style="position: absolute; bottom: -20px; right: -20px; background: var(--navy); color: #fff; padding: 18px 24px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px;">
+                        <i class="fa-solid fa-award" style="color: var(--gold); font-size: 28px;"></i>
+                        <div>
+                            <strong style="display: block; font-size: 14px;">DOT-Accredited</strong>
+                            <small style="color: #b9c6d6; font-size: 11px;">Official Travel Agency</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="eyebrow">OUR STORY</span>
+                    <span class="est-badge"><i class="fa-solid fa-circle"></i> Founded 2015</span>
+                    <h2>Local Guides, Genuine Visayan Hospitality</h2>
+                    <p>Uncle Ron's Travel & Tours started as a small family venture helping visitors discover the raw beauty of Cebu and Bohol. What began with a single van and a handful of eager travelers has evolved into a trusted, full-service travel agency.</p>
+                    <p>Despite our growth, our core principle remains unchanged: to deliver personal, honest, and stress-free travel experiences. Every itinerary is crafted by Visayas locals who know the timing, hidden routes, and spots tourist maps miss.</p>
+
+                    <ul style="list-style: none; padding: 0; margin: 20px 0 28px; display: flex; flex-direction: column; gap: 10px;">
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--navy);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--blue);"></i> Handpicked, time-optimized itineraries
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--navy);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--blue);"></i> Transparent pricing with no surprise add-ons
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--navy);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--blue);"></i> Professional, vetted local drivers & tour guides
+                        </li>
+                    </ul>
+
+                    <a href="services.html" class="btn primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MISSION & VALUES ================= -->
     <section>
         <div class="container">
             <div class="section-title">
                 <div>
                     <span>WHAT WE STAND FOR</span>
-                    <h2>Our Mission & Values</h2>
+                    <h2>Our Mission & Core Values</h2>
                 </div>
             </div>
 
@@ -130,23 +189,23 @@
                 <div class="value-card">
                     <i class="fa-solid fa-bullseye"></i>
                     <h3>Our Mission</h3>
-                    <p>To make travel around Cebu and Bohol easy, affordable, and memorable for every kind of traveler.</p>
+                    <p>To make travel across Cebu, Bohol, and neighboring islands accessible, safe, and unforgettable for families, solo travelers, and groups alike.</p>
                 </div>
                 <div class="value-card">
                     <i class="fa-solid fa-eye"></i>
                     <h3>Our Vision</h3>
-                    <p>To be the most trusted local travel partner in the Visayas, known for genuine care and reliable service.</p>
+                    <p>To be recognized as the Visayas region's premier local tour provider, celebrated for exceptional customer care and cultural authenticity.</p>
                 </div>
                 <div class="value-card">
                     <i class="fa-solid fa-handshake"></i>
                     <h3>Our Promise</h3>
-                    <p>Transparent pricing, accommodating guides, and support that's available whenever you need it.</p>
+                    <p>Upfront pricing without hidden charges, well-maintained air-conditioned vehicles, and responsive customer support every step of the way.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= TEAM ================= -->
+    <!-- ================= MEET THE TEAM ================= -->
     <section>
         <div class="container">
             <div class="section-title">
@@ -160,7 +219,7 @@
                 <div class="team-card">
                     <div class="team-avatar">RC</div>
                     <h4>Ronaldo Cruz</h4>
-                    <span>Founder</span>
+                    <span>Founder & CEO</span>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">LM</div>
@@ -187,7 +246,7 @@
             <div class="cta-banner">
                 <div>
                     <h2>Ready to plan your next island getaway?</h2>
-                    <p>Browse our packages or reach out and let us build the perfect trip for you.</p>
+                    <p>Browse our packages or reach out to let us craft a customized itinerary just for you.</p>
                 </div>
                 <a href="contact.html" class="btn primary">
                     <i class="fa-solid fa-paper-plane"></i>
@@ -197,13 +256,75 @@
         </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
+    
+        <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://wa.me/639123456789" target="_blank" rel="noopener" class="contact-btn whatsapp" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <button type="button" id="contactToggleBtn" title="Contact Us" aria-label="Toggle contact options">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- FOOTER -->
     <footer>
-        <div class="container">
+        <div class="footer-widgets">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Uncle Ron's Travel & Tours is a DOT-accredited travel agency based in Cebu City, Philippines. We specialize in hassle-free, handpicked tour packages across Cebu, Bohol, and nearby islands.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Additional Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="faqs.html">Frequently Asked Questions</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="terms.html">Privacy Policy</a></li>
+                        <li><a href="awards.html">DOT Accreditation & Licenses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Travel Tips & Guides</h3>
+                    <ul class="footer-links">
+                        <li><a href="guides.html">Oslob Whale Shark Rules & Policies</a></li>
+                        <li><a href="guides.html">Canyoneering Kawasan Falls Guide</a></li>
+                        <li><a href="guides.html">Best Months to Visit Cebu & Bohol</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +63 912 345 6789</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines 6000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
             <p>© 2026 Uncle Ron's Travel & Tours. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="../js/auth.js"></script>
     <script src="../js/script.js"></script>
 </body>
 

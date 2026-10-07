@@ -15,6 +15,13 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -36,29 +43,6 @@
         </div>
     </div>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <!-- <header>
-        <div class="container navbar">
-            <div class="logo">
-                <img src="../images/Uncle_rons_logo-removebg-preview.png" alt="Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">Packages</a></li>
-                    <li><a href="#">Car Rentals</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="book-btn">
-                Book Now
-            </a>
-        </div>
-    </header> -->
-
     <!-- ================= NAVBAR WITH DROPDOWN ================= -->
 <header class="header-transparent">
     <div class="container navbar">
@@ -71,34 +55,52 @@
 
                 <!-- PACKAGES DROPDOWN MENU -->
                 <li class="dropdown-parent">
-                    <a href="#">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="../pages/package.html">Packages <i class="fa-solid fa-chevron-down"></i></a>
                     
                     <!-- Nested Dropdown List -->
                     <ul class="dropdown-menu">
-                        <li><a href="pages/cebu-tours/oslob-tour.html">Oslob Tours</a></li>
+                        <li><a href="../pages/cebu-tours/oslob-tour.html">Oslob Tours</a></li>
                         <li><a href="#">Badian Tours</a></li>
                         <li><a href="#">Moalboal Tours</a></li>
                         <li><a href="#">Bohol Tours</a></li>
                     </ul>
                 </li>
 
-                <li><a href="../pages/car-rentals.html">Car Rentals</a></li>
                 <li><a href="../pages/services.html">Services</a></li>
-                <li><a href="../pages/about.html">About</a></li>
+
+                <!-- ABOUT US DROPDOWN MENU -->
+                <li class="dropdown-parent">
+                    <a href="../pages/about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Nested Dropdown List -->
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages/awards.html">Accreditation & Awards</a></li>
+                        <li><a href="../pages/reviews.html">Reviews & Feedback</a></li>
+                        <li><a href="../pages/guides.html">Travel Guides</a></li>
+                        <li><a href="../pages/faqs.html">FAQs</a></li>
+                        <li><a href="../pages/terms.html">Terms & Policies</a></li>
+                    </ul>
+                </li>
                 <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" class="book-btn">Book Now</a>
+
+        <div class="nav-actions">
+            <button type="button" class="icon-btn" onclick="window.urAuth && window.urAuth.openFind()" aria-label="Find My Booking" title="Find My Booking">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="../pages/package.html" class="book-btn"> Book Now</a>
+        </div>
     </div>
 </header>
 
-    <!-- ================= HERO ================= -->
+<!-- ================= HERO ================= --> 
 
     <section class="hero">
 
         <div class="overlay"></div>
 
-        <img class="hero-image" src="../images/bg for mockup.jpg"alt="Hero">
+        <img class="hero-image" src="../images/bg for mockup.jpg" alt="Hero">
 
         <div class="container hero-content">
 
@@ -114,26 +116,16 @@
                 </h1>
 
                 <p>
-
                     Unforgettable destinations.
                     Hassle-free travel.
                     Let us take you there.
-
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="btn primary">
+                    <a href="#packages" class="btn primary">
                         <i class="fa-solid fa-paper-plane"></i>
                         Explore Packages
-                    </a>
-
-                    <a href="#" class="btn secondary">
-
-                        <i class="fa-solid fa-circle-play"></i>
-
-                        Watch Video
-
                     </a>
 
                 </div>
@@ -143,81 +135,6 @@
         </div>
 
     </section>
-
-    <!-- ================= SEARCH ================= -->
-
-    <!-- <section class="search-section">
-
-        <div class="container">
-
-            <form class="search-box">
-
-                <div class="input-box">
-
-                    <label>Destination</label>
-
-                    <input type="text"
-                        placeholder="Where to?">
-
-                </div>
-
-                <div class="input-box">
-
-                    <label>Check In</label>
-
-                    <input type="date">
-
-                </div>
-
-                <div class="input-box">
-
-                    <label>Check Out</label>
-
-                    <input type="date">
-
-                </div>
-
-                <div class="input-box">
-
-                    <label>Travelers</label>
-
-                    <select>
-
-                        <option>1 Traveler</option>
-                        <option>2 Travelers</option>
-                        <option>3 Travelers</option>
-                        <option>4 Travelers</option>
-
-                    </select>
-
-                </div>
-
-                <button>
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    Search Tours
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>  -->
-
-    <!-- <section class="category-filter-section">
-        <div class="container">
-            <div class="filter-wrapper">
-                <span class="filter-label"><i class="fa-solid fa-fire"></i> Popular Destinations:</span>
-                <div class="filter-pills">
-                    <button class="pill active">All Tours</button>
-                    <button class="pill"><i class="fa-solid fa-umbrella-beach"></i> Cebu Tours</button>
-                    <button class="pill"><i class="fa-solid fa-water"></i> Bohol Tours</button>
-                </div>
-            </div>
-        </div>
-    </section>  -->
 
     <!-- ================= CATEGORY FILTER SECTION ================= -->
 <section class="category-filter-section">
@@ -237,14 +154,14 @@
 </section>
 
 <!-- ================= PACKAGES ================= -->
-<section class="packages">
+<section class="packages" id="packages">
     <div class="container">
         <div class="section-title">
             <div>
                 <span>TOP DESTINATIONS</span>
                 <h2>Popular Tours & Packages</h2>
             </div>
-            <a href="#">View All Packages</a>
+            <a href="../pages/package.html">View All Packages</a>
         </div>
 
         <div class="package-grid">
@@ -427,6 +344,64 @@
     </div>
 </section>
 
+    <!-- ================= WHY CHOOSE UNCLE RON'S ================= -->
+    <section class="why-us-section" id="why-us-section">
+        <div class="container">
+ 
+                <div class="why-us-header">
+                    <span>WHY TRAVEL WITH US</span>
+                    <h2> Choose Uncle Ron's</h2>
+                </div>
+ 
+            <div class="why-us-grid">
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">01</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>Local Cebu Experts</h3>
+                    <p>Born and raised in the Visayas, we know the routes, the timing, and the spots tourist maps miss.</p>
+                </div>
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">02</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-route"></i></div>
+                    <h3>Handpicked Itineraries</h3>
+                    <p>Every package is planned around real travel times so you spend your day exploring, not commuting.</p>
+                </div>
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">03</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>The price you see is the price you pay. No hidden fees, no last-minute add-ons.</p>
+                </div>
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">04</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Friendly, Vetted Guides</h3>
+                    <p>Our drivers and tour guides are trained, background-checked, and genuinely enjoy showing off home.</p>
+                </div>
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">05</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Easy Online Booking</h3>
+                    <p>Reserve your tour in minutes and get instant confirmation, no back-and-forth needed.</p>
+                </div>
+ 
+                <div class="why-us-card">
+                    <div class="why-us-number">06</div>
+                    <div class="why-us-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>DOT-Accredited & Insured</h3>
+                    <p>Travel with peace of mind through a fully accredited agency that puts your safety first.</p>
+                </div>
+ 
+            </div>
+ 
+        </div>
+    </section>
+
     <!-- ================= REVIEWS / TESTIMONIALS ================= -->
     <section class="reviews-section" id="reviews-section">
         <div class="container">
@@ -439,7 +414,6 @@
 
             <div class="reviews-grid">
                 
-                <!-- TESTIMONIAL CARD 1 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -460,7 +434,6 @@
                     </div>
                 </div>
 
-                <!-- TESTIMONIAL CARD 2 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -481,7 +454,6 @@
                     </div>
                 </div>
 
-                <!-- TESTIMONIAL CARD 3 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -502,8 +474,6 @@
                     </div>
                 </div>
 
-
-                <!-- TESTIMONIAL CARD 4 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -524,7 +494,6 @@
                     </div>
                 </div>
 
-                <!-- TESTIMONIAL CARD 5 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -545,7 +514,6 @@
                     </div>
                 </div>
 
-                <!-- TESTIMONIAL CARD 6 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
                         <i class="fa-solid fa-star"></i>
@@ -571,67 +539,81 @@
         </div>
     </section>
 
-    <!-- ================= FEATURES ================= -->
-
-    <section class="features">
-
-        <div class="container feature-grid">
-
-            <div class="feature">
-
-                <i class="fa-solid fa-shield-heart"></i>
-
-                <h3>Best Price Guarantee</h3>
-
-                <p>Competitive pricing with no hidden fees.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-solid fa-headset"></i>
-
-                <h3>24/7 Support</h3>
-
-                <p>Customer support anytime you need.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-solid fa-thumbs-up"></i>
-
-                <h3>Trusted & Accredited</h3>
-
-                <p>DOT Accredited Travel Agency.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-regular fa-heart"></i>
-
-                <h3>Memorable Experiences</h3>
-
-                <p>Creating unforgettable adventures.</p>
-
-            </div>
-
+    <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://wa.me/639123456789" target="_blank" rel="noopener" class="contact-btn whatsapp" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
         </div>
+        <button type="button" id="contactToggleBtn" title="Contact Us" aria-label="Toggle contact options">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
 
-    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <!-- ================= FOOTER ================= -->
 
     <footer>
-        <div class="container">
-            <p>
-                © 2026 Uncle Ron's Travel & Tours.
-                All Rights Reserved.
-            </p>
+        <!-- Pre-Footer Widgets Section -->
+        <div class="footer-widgets">
+            <div class="container footer-grid">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>
+                        Uncle Ron's Travel & Tours is a DOT-accredited travel agency based in Cebu City, Philippines. We specialize in hassle-free, handpicked tour packages across Cebu, Bohol, and nearby islands.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Additional Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DOT Accreditation & Licenses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Travel Tips & Guides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Oslob Whale Shark Rules & Policies</a></li>
+                        <li><a href="#">Canyoneering Kawasan Falls Guide</a></li>
+                        <li><a href="#">Best Months to Visit Cebu & Bohol</a></li>
+                        <li><a href="#">What to Pack for Island Hopping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +63 912 345 6789</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines 6000</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Uncle Ron's Travel & Tours. All Rights Reserved.</p>
         </div>
     </footer>
-
+    
+<script src="../js/auth.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>

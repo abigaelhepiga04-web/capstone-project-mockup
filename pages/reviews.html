@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Feedback - Uncle Ron's Travel & Tours</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <span><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines</span>
+            <span><i class="fa-solid fa-phone"></i> +63 912 345 6789</span>
+            <span><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</span>
+        </div>
+        <div class="topbar-right">
+            <span class="follow-label">Follow Us:</span>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <!-- HEADER NAVBAR -->
+    <header class="header-dark">
+        <div class="container navbar">
+            <div class="logo">
+                <img src="../images/Uncle_rons_logo-removebg-preview.png" alt="Uncle Ron's Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index/index.html">Home</a></li>
+                    <li class="dropdown-parent">
+                        <a href="package.html">Packages <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cebu-tours/oslob-tour.html">Oslob Tours</a></li>
+                            <li><a href="#">Badian Tours</a></li>
+                            <li><a href="#">Moalboal Tours</a></li>
+                            <li><a href="#">Bohol Tours</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li class="dropdown-parent">
+                        <a class="active" href="about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="awards.html">Accreditation & Awards</a></li>
+                            <li><a class="active" href="reviews.html">Reviews & Feedback</a></li>
+                            <li><a href="guides.html">Travel Guides</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="terms.html">Terms & Policies</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" id="searchToggle" aria-label="Find my booking">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="#" class="book-btn" id="authBtn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="tour-header-banner">
+        <div class="container">
+            <h1>Reviews & Feedback</h1>
+            <div class="breadcrumb">
+                <a href="../index/index.html">Home</a> / <span>Reviews & Feedback</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COMBINED RATING STRIP ================= -->
+    <section>
+        <div class="container">
+            <div class="rating-strip rating-strip--split">
+                <div class="rating-card rating-card--source">
+                    <i class="fa-brands fa-tripadvisor"></i>
+                    <div>
+                        <div class="rating-score">4.5<span>/5</span></div>
+                        <p>750+ reviews on TripAdvisor</p>
+                    </div>
+                    <a href="#" class="btn secondary">Read on TripAdvisor</a>
+                </div>
+                <div class="rating-card rating-card--source">
+                    <i class="fa-brands fa-google"></i>
+                    <div>
+                        <div class="rating-score">4.3<span>/5</span></div>
+                        <p>212 reviews on Google</p>
+                    </div>
+                    <a href="#" class="btn secondary">Read on Google</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GUEST REVIEWS ================= -->
+    <section class="reviews-section" id="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <span class="eyebrow">TRAVELER STORIES</span>
+                <h2>What Our Guests Say</h2>
+                <span class="squiggle">★</span>
+            </div>
+
+            <div class="filter-pills review-filters">
+                <button type="button" class="pill active" data-filter="all">All Reviews</button>
+                <button type="button" class="pill" data-filter="5">5 Star</button>
+                <button type="button" class="pill" data-filter="4">4 Star</button>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                
+                <div class="testimonial-card" data-rating="5">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Great island-hopping experience</strong>It was great to visit several different islands in one day. The crew made sure everyone felt safe the whole time.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">SR</div>
+                        <div><strong>Shin R.</strong><span>Aug 19</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-rating="5">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Fun island hopping</strong>It was a wonderful experience. Everything went smoothly and our guide was patient with the kids.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">DI</div>
+                        <div><strong>Dakota I.</strong><span>Aug 17</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-rating="5">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Best tour and guides</strong>What a great time! This was our second trip with Uncle Ron's and it won't be the last.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">CA</div>
+                        <div><strong>Chad A.</strong><span>Aug 6</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-rating="5">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Relaxing family trip</strong>Arranging a private tour around our schedule was easy, and the drop-off timing back at the hotel was spot on.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">MD</div>
+                        <div><strong>Mel D.</strong><span>Aug 2</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-rating="4">
+                    <div class="testimonial-stars">★★★★☆</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Whale sharks were incredible</strong>Swimming with the whale sharks was the highlight of our trip. Pickup was a bit early but worth it.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">KP</div>
+                        <div><strong>Ken P.</strong><span>Jul 28</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-rating="5">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-comment"><strong style="display:block;color:var(--navy);margin-bottom:4px;">Kawasan Falls was unreal</strong>The canyoneering trek was challenging but our guide kept us calm the whole way down. Highly recommend.</p>
+                    <div class="testimonial-person">
+                        <div class="testimonial-avatar">AT</div>
+                        <div><strong>Ana T.</strong><span>Jul 22</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+          <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </a>
+            <a href="https://wa.me/639123456789" target="_blank" rel="noopener" class="contact-btn whatsapp" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <button type="button" id="contactToggleBtn" title="Contact Us" aria-label="Toggle contact options">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-widgets">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Uncle Ron's Travel & Tours is a DOT-accredited travel agency based in Cebu City, Philippines. We specialize in hassle-free, handpicked tour packages across Cebu, Bohol, and nearby islands.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Additional Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="faqs.html">Frequently Asked Questions</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="terms.html">Privacy Policy</a></li>
+                        <li><a href="awards.html">DOT Accreditation & Licenses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Travel Tips & Guides</h3>
+                    <ul class="footer-links">
+                        <li><a href="guides.html">Oslob Whale Shark Rules & Policies</a></li>
+                        <li><a href="guides.html">Canyoneering Kawasan Falls Guide</a></li>
+                        <li><a href="guides.html">Best Months to Visit Cebu & Bohol</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +63 912 345 6789</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@uncleronstravelandtours.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines 6000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Uncle Ron's Travel & Tours. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/reviews-filter.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
