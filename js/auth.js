@@ -8,6 +8,19 @@
         set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage blocked */ } }
     };
 
+    if (!localStorage.getItem('ur:bookings')) {
+        LS.set('ur:bookings', [
+            {
+                ref: 'URT-8K4P2M',
+                email: 'rons@gmail.com',
+                name: 'Dadas Santos',
+                tour: 'oslob-whale-shark',
+                date: '2026-10-11',
+                guests: 2
+            }
+        ]);
+    }
+
     const norm = (v) => v.trim().toLowerCase();
 
     /* ---------- bookings ---------- */
@@ -70,6 +83,7 @@
         // Find booking in local storage
         const b = bookings().find((x) => x.ref.toLowerCase() === ref.toLowerCase() && x.email === email);
 
+        
         if (b) {
             close();
             // Redirect to dedicated booking details page

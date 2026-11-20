@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Uncle Ron's Travel & Tours</title>
+    <title>Booking Details - Uncle Ron's Travel & Tours</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,13 +15,13 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48.png">
 
-    <!-- Main Stylesheet (Relative path from pages/) -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
- <!-- Topbar -->
+    <!-- Topbar -->
     <div class="topbar">
         <div class="topbar-left">
             <span><i class="fa-solid fa-location-dot"></i> Cebu City, Philippines</span>
@@ -43,6 +43,7 @@
             <div class="logo">
                 <img src="../images/Uncle_rons_logo-removebg-preview.png" alt="Uncle Ron's Logo">
             </div>
+        </div>
     </header> 
 
 <main class="container booking-details-page">
@@ -50,29 +51,27 @@
     <div class="booking-header-card">
         <div class="booking-ref-info">
             <span class="status-badge confirmed"><i class="fa-solid fa-circle-check"></i> Confirmed</span>
-            <h2>Booking #2026-8671</h2>
-            <p>Reserved on Oct 4, 2026 • Confirmation sent to dadas@gmail.com</p>
+            <h2 id="displayBookingRef">Booking #2026-8671</h2>
+            <p id="displayBookingMeta">Reserved on Oct 4, 2026 • Confirmation sent to dadas@gmail.com</p>
         </div>
         <div class="booking-actions">
             <button class="btn-secondary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
         </div>
     </div>
 
-        
-
     <!-- Grid Content -->
     <div class="booking-details-grid">
-        <!-- Left Column: Tour & Guest Info -->
+        <!-- Left Column: Tour & Guest Info + Cancellation Box -->
         <div class="details-main">
             <div class="details-card">
                 <h3>Tour Details</h3>
                 <div class="detail-row">
                     <span class="label">Package:</span>
-                    <span class="value">Private Oslob Whale Shark Watching & Snorkeling Tour</span>
+                    <span class="value" id="displayTourPackage">Private Oslob Whale Shark Watching & Snorkeling Tour</span>
                 </div>
                 <div class="detail-row">
                     <span class="label">Tour Date:</span>
-                    <span class="value">Wednesday, Oct 7, 2026</span>
+                    <span class="value" id="displayTourDate">Wednesday, Oct 7, 2026</span>
                 </div>
                 <div class="detail-row">
                     <span class="label">Booking Type:</span>
@@ -80,7 +79,7 @@
                 </div>
                 <div class="detail-row">
                     <span class="label">Guests:</span>
-                    <span class="value">2 Adults</span>
+                    <span class="value" id="displayGuests">2 Adults</span>
                 </div>
             </div>
 
@@ -88,11 +87,11 @@
                 <h3>Pickup & Contact Details</h3>
                 <div class="detail-row">
                     <span class="label">Lead Guest:</span>
-                    <span class="value">Dadas Santos</span>
+                    <span class="value" id="displayLeadGuest">Dadas Santos</span>
                 </div>
                 <div class="detail-row">
                     <span class="label">Email:</span>
-                    <span class="value">dadas@gmail.com</span>
+                    <span class="value" id="displayEmail">dadas@gmail.com</span>
                 </div>
                 <div class="detail-row">
                     <span class="label">Contact Phone:</span>
@@ -102,6 +101,15 @@
                     <span class="label">Pickup Location:</span>
                     <span class="value">Quest Hotel Cebu - Main Lobby</span>
                 </div>
+            </div>
+
+            <!-- NEED TO CANCEL TOUR CARD -->
+            <div class="details-card cancel-tour-card">
+                <h3>Need to cancel your tour?</h3>
+                <p>If you can no longer join your scheduled tour, please contact our team to request a cancellation. Cancellation terms may apply.</p>
+                <button type="button" class="btn-cancel-request" id="openCancelModalBtn">
+                    <i class="fa-regular fa-comments"></i> Contact Us to Cancel
+                </button>
             </div>
         </div>
 
@@ -135,44 +143,156 @@
     </div>
 </main>
 
-    <script>
+<!-- CANCELLATION OPTIONS MODAL -->
+<div class="cancel-modal-overlay" id="cancelModalOverlay">
+    <div class="cancel-modal">
+        <button type="button" class="cancel-modal-close" id="closeCancelModalBtn"><i class="fa-solid fa-xmark"></i></button>
+        
+        <h2>Request Tour Cancellation</h2>
+        <p class="modal-subtext">Choose your preferred contact channel to reach our team and request a cancellation:</p>
+
+        <!-- Contact Channels -->
+        <div class="cancel-channels">
+            <a href="https://m.me/uncleronstravelandtours" target="_blank" class="channel-card">
+                <div class="channel-icon facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="channel-info">
+                    <strong>Facebook Messenger</strong>
+                    <span>A familiar channel for customers to contact the business.</span>
+                </div>
+                <i class="fa-solid fa-chevron-right channel-arrow"></i>
+            </a>
+
+            <a href="#" class="channel-card">
+                <div class="channel-icon phone"><i class="fa-solid fa-phone"></i></div>
+                <div class="channel-info">
+                    <strong>Contact Number (+63 912 345 6789)</strong>
+                    <span>For customers who prefer to call or text.</span>
+                </div>
+                <i class="fa-solid fa-chevron-right channel-arrow"></i>
+            </a>
+
+            <a href="#" class="channel-card">
+                <div class="channel-icon email"><i class="fa-solid fa-envelope"></i></div>
+                <div class="channel-info">
+                    <strong>Email (info@uncleronstravelandtours.com)</strong>
+                    <span>An alternative channel for cancellation requests.</span>
+                </div>
+                <i class="fa-solid fa-chevron-right channel-arrow"></i>
+            </a>
+        </div>
+
+        <!-- Copy Template Box -->
+        <div class="copy-template-box">
+            <div class="template-header">
+                <span>Copy this message template to send us:</span>
+                <button type="button" class="btn-copy-template" id="copyTemplateBtn">
+                    <i class="fa-regular fa-copy"></i> <span id="copyBtnText">Copy</span>
+                </button>
+            </div>
+            <textarea id="cancelMessageTextarea" readonly rows="7"></textarea>
+        </div>
+    </div>
+</div>
+
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const refParam = urlParams.get('ref');
 
-        if (!refParam) return;
+        // References to DOM elements
+        const h2Ref = document.getElementById('displayBookingRef');
+        const pMeta = document.getElementById('displayBookingMeta');
+        const tourPkg = document.getElementById('displayTourPackage');
+        const tourDate = document.getElementById('displayTourDate');
+        const leadGuest = document.getElementById('displayLeadGuest');
+        const emailVal = document.getElementById('displayEmail');
+        const guestsVal = document.getElementById('displayGuests');
 
-        // Retrieve saved bookings from localStorage
-        try {
-            const bookings = JSON.parse(localStorage.getItem('ur:bookings')) || [];
-            const booking = bookings.find(b => b.ref.toLowerCase() === refParam.toLowerCase());
+        if (refParam) {
+            try {
+                const bookings = JSON.parse(localStorage.getItem('ur:bookings')) || [];
+                const booking = bookings.find(b => b.ref.toLowerCase() === refParam.toLowerCase());
 
-            if (booking) {
-                // Update header title and email
-                const h2 = document.querySelector('.booking-ref-info h2');
-                const pInfo = document.querySelector('.booking-ref-info p');
-                if (h2) h2.textContent = `Booking #${booking.ref}`;
-                if (pInfo && booking.email) {
-                    pInfo.textContent = `Confirmation sent to ${booking.email}`;
+                if (booking) {
+                    if (h2Ref) h2Ref.textContent = `Booking #${booking.ref}`;
+                    if (pMeta && booking.email) pMeta.textContent = `Confirmation sent to ${booking.email}`;
+                    if (tourPkg && booking.tour) tourPkg.textContent = booking.tour;
+                    if (tourDate && booking.date) tourDate.textContent = booking.date;
+                    if (guestsVal && booking.guests) guestsVal.textContent = `${booking.guests} Guests`;
+                    if (leadGuest && booking.name) leadGuest.textContent = booking.name;
+                    if (emailVal && booking.email) emailVal.textContent = booking.email;
                 }
-
-                // Update tour name and date
-                const tourVal = document.querySelector('.detail-row:nth-child(1) .value');
-                const dateVal = document.querySelector('.detail-row:nth-child(2) .value');
-                // const guestsVal = document.querySelector('.detail-row:nth-child(4) .value');
-                const nameVal = document.querySelector('.details-card:nth-child(2) .detail-row:nth-child(1) .value');
-
-                if (tourVal && booking.tour) tourVal.textContent = booking.tour;
-                if (dateVal && booking.date) dateVal.textContent = booking.date;
-                if (guestsVal && booking.guests) guestsVal.textContent = `${booking.guests} Exclusive`;
-                if (nameVal && booking.name) nameVal.textContent = booking.name;
+            } catch (e) {
+                console.error("Error loading booking details:", e);
             }
-        } catch (e) {
-            console.error("Error loading booking details:", e);
+        }
+
+        // Cancellation Modal Elements
+        const openCancelModalBtn = document.getElementById('openCancelModalBtn');
+        const closeCancelModalBtn = document.getElementById('closeCancelModalBtn');
+        const cancelModalOverlay = document.getElementById('cancelModalOverlay');
+        const cancelMessageTextarea = document.getElementById('cancelMessageTextarea');
+        const copyTemplateBtn = document.getElementById('copyTemplateBtn');
+        const copyBtnText = document.getElementById('copyBtnText');
+
+        // Dynamic Template Message Generator
+        function buildCancelTemplate() {
+            const currentRef = (h2Ref.textContent || '').replace('Booking #', '').trim();
+            const currentGuest = leadGuest.textContent.trim();
+            const currentTour = tourPkg.textContent.trim();
+            const currentDate = tourDate.textContent.trim();
+
+            return `Hello, Uncle Ron's Travel and Tours. I would like to request the cancellation of my booking.
+
+Booking Number: ${currentRef}
+Lead Guest: ${currentGuest}
+Tour Package: ${currentTour}
+Tour Date: ${currentDate}
+Reason for Cancellation: [Optional]
+
+Please let me know the cancellation procedure and whether any refund applies. Thank you.`;
+        }
+
+        // Open Modal
+        if (openCancelModalBtn && cancelModalOverlay) {
+            openCancelModalBtn.addEventListener('click', () => {
+                cancelMessageTextarea.value = buildCancelTemplate();
+                cancelModalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        // Close Modal
+        function closeModal() {
+            if (cancelModalOverlay) {
+                cancelModalOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (closeCancelModalBtn) closeCancelModalBtn.addEventListener('click', closeModal);
+        if (cancelModalOverlay) {
+            cancelModalOverlay.addEventListener('click', (e) => {
+                if (e.target === cancelModalOverlay) closeModal();
+            });
+        }
+
+        // Copy Message to Clipboard
+        if (copyTemplateBtn && cancelMessageTextarea) {
+            copyTemplateBtn.addEventListener('click', () => {
+                cancelMessageTextarea.select();
+                navigator.clipboard.writeText(cancelMessageTextarea.value).then(() => {
+                    copyBtnText.textContent = 'Copied!';
+                    copyTemplateBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtnText.textContent = 'Copy';
+                        copyTemplateBtn.classList.remove('copied');
+                    }, 2000);
+                });
+            });
         }
     });
 </script>
 
 </body>
 </html>
-

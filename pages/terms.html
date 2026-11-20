@@ -55,7 +55,7 @@
                     <li class="dropdown-parent">
                         <a class="active" href="about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="awards.html">Accreditation & Awards</a></li>
+                            <li><a href="awards.html">Accreditation & Licenses</a></li>
                             <li><a href="reviews.html">Reviews & Feedback</a></li>
                             <li><a href="guides.html">Travel Guides</a></li>
                             <li><a href="faqs.html">FAQs</a></li>
@@ -66,10 +66,10 @@
                 </ul>
             </nav>
             <div class="nav-actions">
-                <button type="button" class="icon-btn" id="searchToggle" aria-label="Find my booking">
+                 <button type="button" class="icon-btn" onclick="window.urAuth && window.urAuth.openFind()" aria-label="Find My Booking" title="Find My Booking">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <a href="#" class="book-btn" id="authBtn">Sign Up</a>
+                <a href="package.html" class="book-btn" id="authBtn">Book Now</a>
             </div>
         </div>
     </header>
@@ -84,57 +84,261 @@
         </div>
     </section>
 
-    <!-- ================= TERMS & PRIVACY ================= -->
+    <!-- ================= TERMS & POLICIES CONTENT ================= -->
     <section class="policy-section">
         <div class="container policy-layout">
 
+            <!-- Left Jump Navigation Sidebar -->
             <nav class="policy-jump">
                 <a href="#terms-block">Terms & Conditions</a>
                 <a href="#privacy-block">Privacy Policy</a>
+                <a href="#cancellation-block">Cancellation and Refund Policy</a>
             </nav>
 
             <div class="policy-main">
+                
+                <!-- 1. Terms & Conditions -->
                 <div class="policy-block" id="terms-block">
                     <h2>Terms & Conditions</h2>
-                    <p class="policy-updated">Last updated: January 2026</p>
+                    <p class="policy-updated">By using the Uncle Ron’s Travel and Tours booking system, you agree to the following terms and conditions.</p>
+                    
                     <div class="policy-clause">
-                    <span class="policy-num">1</span>
-                    <div><h3>Bookings & Payment</h3><p>A booking is confirmed once the required deposit (50% or full payment) is received. Prices are quoted in Philippine Pesos and may include a service charge depending on your chosen payment method.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">2</span>
-                    <div><h3>Cancellations & Rescheduling</h3><p>Rescheduling is free of charge with at least 24 hours' notice, subject to availability. Cancellations within 24 hours of the tour date may be non-refundable; please contact us directly to discuss your situation.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">3</span>
-                    <div><h3>Guest Conduct & Safety</h3><p>Guests are expected to follow guide instructions at all times, particularly during whale shark encounters and canyoneering activities, for their own safety and the protection of local wildlife.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">4</span>
-                    <div><h3>Weather & Force Majeure</h3><p>Tours affected by unsafe weather or conditions beyond our control will be rescheduled where possible. We are not liable for delays caused by traffic, weather, or third-party transport providers.</p></div>
-                </div>
+                        <span class="policy-num">1</span>
+                        <div>
+                            <h3>Booking and Reservations</h3>
+                            <p>Customers must provide accurate and complete information when submitting a booking request. A booking is considered confirmed only after the required payment has been received and verified and confirmation has been issued by the agency.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">2</span>
+                        <div>
+                            <h3>Payments</h3>
+                            <p>Customers must pay the required reservation fee, down payment, or package balance according to the payment instructions provided. Payment confirmation may require verification by authorized staff.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">3</span>
+                        <div>
+                            <h3>Tour Packages and Itineraries</h3>
+                            <p>Tour inclusions, exclusions, prices, schedules, and minimum group requirements will be specified in the package details. Itineraries may be adjusted due to weather, safety concerns, operational requirements, or circumstances beyond the agency’s control.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">4</span>
+                        <div>
+                            <h3>Customer Responsibilities</h3>
+                            <p>Customers are responsible for providing accurate booking information, arriving at the designated meeting point on time, following tour instructions, and complying with applicable destination rules.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">5</span>
+                        <div>
+                            <h3>Booking Changes</h3>
+                            <p>Requests to change travel dates, participants, or itineraries are subject to availability and applicable supplier conditions. Additional charges may apply when disclosed and agreed upon.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">6</span>
+                        <div>
+                            <h3>Cancellations and Refunds</h3>
+                            <p>Cancellations and refund requests will be handled according to the agency’s Cancellation Policy and applicable Philippine laws.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">7</span>
+                        <div>
+                            <h3>Safety and Unforeseen Circumstances</h3>
+                            <p>The agency may modify, postpone, or cancel tour activities when necessary to protect customers and staff or comply with official restrictions.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">8</span>
+                        <div>
+                            <h3>Customer Support</h3>
+                            <p>Customers may contact the agency through its official communication channels for booking concerns, payment verification, changes, or complaints.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">9</span>
+                        <div>
+                            <h3>Policy Updates</h3>
+                            <p>The agency may update these terms when necessary. Material changes will be communicated appropriately and will not remove rights or protections required by law.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 24px; font-size: 13.5px; color: var(--navy); font-weight: 600;">
+                        By proceeding with a booking, customers acknowledge that they have read and understood these terms and conditions.
+                    </p>
                 </div>
 
+                <!-- 2. Privacy Policy -->
                 <div class="policy-block" id="privacy-block">
                     <h2>Privacy Policy</h2>
-                    <p class="policy-updated">Last updated: January 2026</p>
+                    <p class="policy-updated">Uncle Ron’s Travel and Tours respects your privacy and is committed to protecting the personal information collected through our booking and management system.</p>
+                    
                     <div class="policy-clause">
-                    <span class="policy-num">1</span>
-                    <div><h3>Information We Collect</h3><p>When you book a tour or contact us, we collect the details you provide directly: your name, email, phone number, and any pickup or trip details needed to run your tour.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">2</span>
-                    <div><h3>How We Use Your Information</h3><p>Your information is used to confirm and manage your booking, communicate with you about your trip, and improve our services. We do not sell your personal information to third parties.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">3</span>
-                    <div><h3>Payment Security</h3><p>Card and e-wallet payments are processed through our payment partners' own secure systems. We do not store your full card details on our servers.</p></div>
-                </div><div class="policy-clause">
-                    <span class="policy-num">4</span>
-                    <div><h3>Your Choices</h3><p>You can ask us to update or delete your information at any time by contacting info@uncleronstravelandtours.com.</p></div>
+                        <span class="policy-num">1</span>
+                        <div>
+                            <h3>Information We Collect</h3>
+                            <p>We may collect the following information when you inquire about or book a tour:</p>
+                            <ul style="margin-top: 6px; padding-left: 20px; color: var(--muted); font-size: 13.5px;">
+                                <li>Full name and contact information</li>
+                                <li>Tour destination and preferred travel dates</li>
+                                <li>Number of guests and booking details</li>
+                                <li>Payment confirmation details and receipt references</li>
+                                <li>Information submitted through customer service inquiries</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">2</span>
+                        <div>
+                            <h3>How We Use Your Information</h3>
+                            <p>Your information may be used to:</p>
+                            <ul style="margin-top: 6px; padding-left: 20px; color: var(--muted); font-size: 13.5px;">
+                                <li>Process and manage tour reservations</li>
+                                <li>Verify payments and reservation status</li>
+                                <li>Coordinate itineraries, transportation, and tour schedules</li>
+                                <li>Send booking confirmations and important updates</li>
+                                <li>Respond to inquiries, complaints, and refund requests</li>
+                                <li>Maintain transaction records and meet legal obligations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">3</span>
+                        <div>
+                            <h3>Information Sharing</h3>
+                            <p>Personal information may be shared with authorized staff and relevant service providers, such as transportation operators, accommodation operators, or tour partners, when necessary to fulfill your booking or comply with legal requirements.</p>
+                            <p style="margin-top: 6px;">We do not sell customers’ personal information.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">4</span>
+                        <div>
+                            <h3>Data Security</h3>
+                            <p>We implement reasonable organizational, physical, and technical safeguards to protect personal information against unauthorized access, disclosure, alteration, or loss.</p>
+                            <p style="margin-top: 6px;">Access to customer records should be limited to authorized personnel.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">5</span>
+                        <div>
+                            <h3>Data Retention</h3>
+                            <p>Personal information is retained only for as long as necessary for legitimate business purposes and applicable legal, accounting, and regulatory requirements. Information will be securely disposed of when retention is no longer necessary, subject to applicable law.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">6</span>
+                        <div>
+                            <h3>Your Privacy Rights</h3>
+                            <p>Subject to applicable Philippine law, you may request access to, correction of, or other lawful action regarding your personal information. You may also raise concerns about how your information is handled.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">7</span>
+                        <div>
+                            <h3>Contact Us</h3>
+                            <p>For privacy-related questions or requests, please contact Uncle Ron’s Travel and Tours through its official communication channels.</p>
+                            <p style="margin-top: 8px; font-size: 12.5px; font-style: italic; color: var(--navy);">This policy is intended to comply with the Philippine Data Privacy Act of 2012 (Republic Act No. 10173) and its applicable implementing rules.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 3. Cancellation and Refund Policy -->
+                <div class="policy-block" id="cancellation-block">
+                    <h2>Cancellation and Refund Policy</h2>
+                    <p class="policy-updated">Uncle Ron’s Travel and Tours understands that travel plans may change. This policy explains how customers may request cancellations, rescheduling, and refunds for tour reservations.</p>
+                    
+                    <div class="policy-clause">
+                        <span class="policy-num">1</span>
+                        <div>
+                            <h3>Customer-Initiated Cancellations</h3>
+                            <p>Customers who wish to cancel a reservation must submit a cancellation request through the booking system or contact the agency directly. The request should include the booking reference and reason for cancellation.</p>
+                            <p style="margin-top: 8px;">The applicable refund will depend on the cancellation notice period, package conditions, and any disclosed nonrefundable charges, subject to applicable law.</p>
+                            
+                            <div style="background: var(--light-blue); border-radius: 10px; padding: 14px; margin-top: 12px;">
+                                <strong style="display: block; color: var(--navy); font-size: 13px; margin-bottom: 6px;">Proposed refund schedule for eligible refundable amounts:</strong>
+                                <ul style="padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.6;">
+                                    <li>7 or more days before the tour: % refund</li>
+                                    <li>3–6 days before the tour: % refund</li>
+                                    <li>1–2 days before the tour: % refund</li>
+                                    <li>Less than 24 hours before the tour or no-show: No refund may apply where clearly disclosed and legally permitted.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">2</span>
+                        <div>
+                            <h3>Agency-Initiated Cancellations</h3>
+                            <p>If the agency cancels a tour and cannot provide an acceptable alternative, customers will be offered the applicable refund or other legally required remedy.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">3</span>
+                        <div>
+                            <h3>Weather and Safety Concerns</h3>
+                            <p>Tours may be postponed, modified, or canceled because of severe weather, government restrictions, transportation disruptions, or safety concerns. Customers will be informed of available rescheduling or refund options in accordance with applicable law and the disclosed package conditions.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">4</span>
+                        <div>
+                            <h3>Rescheduling Requests</h3>
+                            <p>Customers may request a change of travel date, subject to availability, supplier conditions, and any applicable charges disclosed before the change is confirmed.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">5</span>
+                        <div>
+                            <h3>Refund Processing</h3>
+                            <p>All refund requests are subject to review and verification. Once approved, the agency will inform the customer of the refund amount, method, and expected processing period.</p>
+                            <p style="margin-top: 6px;">Actual processing time may depend on the payment provider or financial institution. A refund will only be marked as completed after the return of funds has been verified.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">6</span>
+                        <div>
+                            <h3>How to Request a Cancellation or Refund</h3>
+                            <p>Please provide your booking reference, registered name, reason for cancellation, and relevant supporting information through the booking system or official customer service channel.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-clause">
+                        <span class="policy-num">7</span>
+                        <div>
+                            <h3>Important Notice</h3>
+                            <p>The agency will handle cancellations and refund requests fairly and in accordance with applicable Philippine consumer protection laws. This policy does not exclude any rights or remedies that customers are legally entitled to receive.</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         </div>
     </section>
 
-          <!-- Floating Contact Widget -->
+    <!-- Floating Contact Widget -->
     <div class="floating-contact-wrapper">
         <div class="contact-options" id="contactOptions">
             <a href="https://m.me/uncleronstravelandtours" target="_blank" rel="noopener" class="contact-btn messenger" title="Chat on Messenger">
@@ -172,7 +376,7 @@
                         <li><a href="faqs.html">Frequently Asked Questions</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
                         <li><a href="terms.html">Privacy Policy</a></li>
-                        <li><a href="awards.html">DOT Accreditation & Licenses</a></li>
+                        <li><a href="awards.html">Accreditation & Licenses</a></li>
                     </ul>
                 </div>
 

@@ -62,7 +62,7 @@
                         <a href="../pages/about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
                         <!-- Nested Dropdown List -->
                         <ul class="dropdown-menu">
-                            <li><a href="../pages/awards.html">Accreditation & Awards</a></li>
+                            <li><a href="../pages/awards.html">Accreditation & Licenses</a></li>
                             <li><a href="../pages/reviews.html">Reviews & Feedback</a></li>
                             <li><a href="../pages/guides.html">Travel Guides</a></li>
                             <li><a href="../pages/faqs.html">FAQs</a></li>
@@ -150,18 +150,18 @@
                 <form class="contact-form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="contactFullName">Full Name</label>
+                            <label for="contactFullName">Full Name <span class="required">*</span></label>
                             <input type="text" id="contactFullName" placeholder="Juan Dela Cruz" required>
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail">Email Address</label>
+                            <label for="contactEmail">Email Address <span class="required">*</span></label>
                             <input type="email" id="contactEmail" placeholder="juan@email.com" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="contactPhone">Phone Number</label>
+                            <label for="contactPhone">Phone Number (Optional)</label>
                             <input type="tel" id="contactPhone" placeholder="+63 9XX XXX XXXX">
                         </div>
                         <div class="form-group">
@@ -176,9 +176,18 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="contactMessage">Message</label>
+                        <label for="contactMessage">Message <span class="required">*</span></label>
                         <textarea id="contactMessage" placeholder="Tell us about your trip..."></textarea>
                     </div>
+
+                    <!-- ACCEPTANCE OF TERMS AND PRIVACY POLICY -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="../pages/terms.html" target="_blank">Terms & Conditions</a> and <a href="../pages/terms.html" target="_blank">Privacy Policy</a>.
+                            </label>
+                        </div>
 
                     <button type="submit" class="contact-submit-btn">Send Message</button>
                 </form>
@@ -246,7 +255,7 @@
                         <li><a href="#">Frequently Asked Questions</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">DOT Accreditation & Licenses</a></li>
+                        <li><a href="#">Accreditation & Licenses</a></li>
                     </ul>
                 </div>
 
