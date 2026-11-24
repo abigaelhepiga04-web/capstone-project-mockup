@@ -516,30 +516,44 @@
                     </div>
                     <div class="ur-ai-bubble">
                         <strong>Hello! 👋 I'm Ronny, your travel guide!</strong><br>
-                        I can help you explore tour packages by budget or interest, or guide you through booking and payment steps. How can I assist you today?
+                        I can help you explore tour packages, check availability, compare tours, and answer booking or payment questions. Choose a topic below, or type your own question anytime.
                     </div>
                 </div>
 
+                <!-- Six guided assistance topics (shown on the welcome screen) -->
                 <div class="ur-ai-quick-grid" id="urAiQuickGrid">
-                    <button type="button" class="ur-quick-card" data-prompt="Recommend a tour for my budget">
+                    <button type="button" class="ur-quick-card" data-card="find-tour">
                         <span class="ur-qc-icon blue"><i class="fa-solid fa-compass"></i></span>
-                        <span>Recommend<br>a Tour</span>
+                        <span class="ur-qc-copy"><strong>Find a Tour</strong><small>Get personalized recommendations</small></span>
                     </button>
-                    <button type="button" class="ur-quick-card" data-prompt="Show me your popular tour packages">
+                    <button type="button" class="ur-quick-card" data-card="check-availability">
                         <span class="ur-qc-icon navy"><i class="fa-solid fa-map-location-dot"></i></span>
-                        <span>Explore<br>Packages</span>
+                        <span class="ur-qc-copy"><strong>Check Availability</strong><small>Explore available tour dates</small></span>
                     </button>
-                    <button type="button" class="ur-quick-card" data-prompt="How do I book a tour?">
+                    <button type="button" class="ur-quick-card" data-card="payment-help">
                         <span class="ur-qc-icon blue"><i class="fa-solid fa-calendar-check"></i></span>
-                        <span>Booking<br>Assistance</span>
+                        <span class="ur-qc-copy"><strong>Payment Help</strong><small>Get payment assistance</small></span>
                     </button>
-                    <button type="button" class="ur-quick-card" data-prompt="What payment methods do you accept?">
-                        <span class="ur-qc-icon gold"><i class="fa-solid fa-wallet"></i></span>
-                        <span>Payment<br>Assistance</span>
+                    <button type="button" class="ur-quick-card" data-card="compare-tours">
+                        <span class="ur-qc-icon gold"><i class="fa-solid fa-scale-balanced"></i></span>
+                        <span class="ur-qc-copy"><strong>Compare Tours</strong><small>Compare package details</small></span>
                     </button>
-                    <button type="button" class="ur-quick-wide" data-prompt="I have a concern and need human support">
-                        <i class="fa-solid fa-circle-question"></i> Ask a Question / Contact Staff
+                    <button type="button" class="ur-quick-card" data-card="my-booking">
+                        <span class="ur-qc-icon gold"><i class="fa-solid fa-ticket"></i></span>
+                        <span class="ur-qc-copy"><strong>My Booking</strong><small>Find your booking details</small></span>
                     </button>
+                    <button type="button" class="ur-quick-card" data-card="other-questions">
+                        <span class="ur-qc-icon navy"><i class="fa-solid fa-comments"></i></span>
+                        <span class="ur-qc-copy"><strong>Other Questions</strong><small>Ask Ronny anything</small></span>
+                    </button>
+                </div>
+
+                <!-- Compact control shown after a topic is selected -->
+                <div class="ur-ai-topic-toolbar" id="urAiTopicToolbar" hidden>
+                    <button type="button" id="urAiBrowseTopics">
+                        <i class="fa-solid fa-grip"></i> Browse assistance topics
+                    </button>
+                    <span>Or type your own question below</span>
                 </div>
 
                 <!-- Popular Suggestions Carousel -->
